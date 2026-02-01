@@ -6,7 +6,7 @@
     <style>
         body {
             margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;
-            background: linear-gradient(135deg, #fff0f5 0%, #ffdee9 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffdee9 100%); font-family: 'Segoe UI', sans-serif;
         }
         .card {
             background: white; width: 85%; max-width: 400px; padding: 30px; border-radius: 30px;
@@ -15,29 +15,25 @@
         .emoji-display { font-size: 80px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; }
         .princess { animation: shake 0.5s infinite alternate; display: inline-block; }
         .prince { animation: tremble 0.2s infinite; display: inline-block; }
-        
-        @keyframes shake { from { transform: rotate(-10deg) scale(1.1); } to { transform: rotate(10deg) scale(1.1); } }
-        @keyframes tremble { 0% { transform: translate(1px, 1px); } 50% { transform: translate(-1px, -1px); } 100% { transform: translate(1px, -1px); } }
-
-        h2 { color: #ff4b5c; font-size: 20px; line-height: 1.4; margin: 20px 0; }
+        @keyframes shake { from { transform: rotate(-10deg); } to { transform: rotate(10deg); } }
+        @keyframes tremble { 0% { transform: translate(1px, 1px); } 50% { transform: translate(-1px, -1px); } }
+        h2 { color: #ff4b5c; font-size: 19px; line-height: 1.5; margin: 20px 0; }
         .btn-container { display: flex; flex-direction: column; gap: 12px; }
         button {
             padding: 15px; border: none; border-radius: 50px; font-weight: bold;
             cursor: pointer; transition: 0.3s; font-size: 15px;
         }
-        .yes { background: #ff4b5c; color: white; box-shadow: 0 4px 10px rgba(255, 75, 92, 0.3); }
+        .yes { background: #ff4b5c; color: white; }
         .punish { background: #fff0f5; color: #ff4b5c; border: 2px dashed #ff4b5c; }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="emoji-display">
-            <span class="prince">😨</span>
-            <span class="princess">👸🏻💢</span>
-        </div>
+        <div class="emoji-display"><span class="prince">😨</span><span class="princess">👸🏻💢</span></div>
         <h2>
             Saurav, did you ask your princess out yet? <br><br>
-            No??! You’re lucky Shraiya loves you even though it’s already 1st Feb... 😤
+            No??! You’re lucky Shraiya loves you even though it’s already 1st Feb... 😤<br><br>
+            Do you wanna redeem yourself? 🥺
         </h2>
         <div class="btn-container">
             <button class="yes" onclick="location.href='redeem.html'">Yes, I'm sorry! Tell me what to do 😰</button>
