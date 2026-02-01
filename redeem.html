@@ -2,57 +2,55 @@
 <html>
 <head>
     <title>For My Princess Shraiya ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;
-            background-color: #ffe4e1; /* Light Misty Rose Background */
-            font-family: 'Arial Rounded MT Bold', Arial; overflow: hidden;
+            background-color: #fff5f7; font-family: 'Segoe UI', sans-serif; overflow: hidden;
         }
         .card {
-            background: white; padding: 35px; border-radius: 30px; width: 85%; max-width: 500px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1); text-align: center; position: relative; z-index: 10;
+            background: white; padding: 30px; border-radius: 35px; width: 85%; max-width: 450px;
+            box-shadow: 0 20px 50px rgba(255,182,193,0.5); text-align: center; position: relative; z-index: 10;
             border: 3px solid #ffb7c5;
         }
-        h1 { color: #ff4b5c; font-size: 19px; line-height: 1.5; }
-        .apology { color: #d63384; font-style: italic; font-size: 17px; margin-bottom: 20px; display: block; font-weight: bold; }
-        .highlight { color: #ff1493; font-size: 24px; font-weight: bold; display: block; margin: 8px 0; }
-        .gif-container { width: 160px; margin: 0 auto 15px; border-radius: 15px; overflow: hidden; }
-        .gif-container img { width: 100%; height: auto; }
-        .heart { position: absolute; color: #ff0000; font-size: 20px; animation: float 5s linear infinite; z-index: 1; opacity: 0.8; }
+        .bouncing-stickers { font-size: 70px; margin-bottom: 15px; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        
+        h1 { color: #ff4b5c; font-size: 18px; line-height: 1.6; }
+        .apology { color: #d63384; font-style: italic; font-size: 16px; margin-bottom: 15px; display: block; font-weight: bold; }
+        .highlight { color: #ff1493; font-size: 24px; font-weight: bold; display: block; margin: 10px 0; text-decoration: underline; }
+        
+        .heart { position: absolute; color: #ff0000; font-size: 25px; animation: float 4s linear infinite; z-index: 1; opacity: 0.8; }
         @keyframes float { 
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+            0% { transform: translateY(110vh) scale(0); opacity: 0; }
+            20% { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.5) rotate(360deg); opacity: 0; }
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="gif-container">
-            <img src="https://media1.tenor.com/m/N5_LpI0p78YAAAAC/mochi-mochi-peach-cat-flowers.gif" alt="Flowers">
-        </div>
-        
+        <div class="bouncing-stickers">💐🍫🎁</div>
         <span class="apology">"First and foremost, tell I'm sorry my dearest princess Shraiya, I Love You to the moon and back" 🌙✨</span>
-
         <h1>
-            Now... send her <span class="highlight">FLOWERS! 🌹</span>
-            There better be at least 20 RED ROSES and Swiss Raffaello chocolate! 🍫<br><br>
+            Now... send her <span class="highlight">20 RED ROSES 🌹</span>
+            And Swiss Raffaello chocolate! 🍫<br><br>
             That’s the least you could do! 😤<br><br>
-            And then send her a <span class="highlight">5k gift card! 💳</span>
-            Now pray to God she forgives you 🙏🏻
+            Then a <span class="highlight">5k gift card! 💳</span>
+            Pray to God she forgives you 🙏🏻
         </h1>
     </div>
-
     <script>
         function createHeart() {
             const h = document.createElement("div");
-            h.innerHTML = "❤️"; h.classList.add("heart");
+            h.innerHTML = Math.random() > 0.5 ? "❤️" : "🌸";
+            h.classList.add("heart");
             h.style.left = Math.random() * 100 + "vw";
-            h.style.fontSize = (Math.random() * 20 + 15) + "px";
-            h.style.animationDuration = (Math.random() * 3 + 3) + "s";
+            h.style.animationDuration = (Math.random() * 2 + 3) + "s";
             document.body.appendChild(h);
-            setTimeout(() => h.remove(), 6000);
+            setTimeout(() => h.remove(), 4000);
         }
-        setInterval(createHeart, 300);
+        setInterval(createHeart, 250);
     </script>
 </body>
 </html>
