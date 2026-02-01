@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redemption Time ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #fff0f5, #ff4b5c);
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 30px;
+      width: 85%;
+      max-width: 500px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+      animation: pop 0.6s ease;
+      position: relative;
+      z-index: 10;
+    }
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    h1 {
+      color: #ff2e63;
+      line-height: 1.5;
+      font-size: 22px;
+    }
+    .emoji-header {
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+    /* Floating hearts/petals effect */
+    .petal {
+      position: absolute;
+      background: #ff2e63;
+      border-radius: 150% 0 150% 0;
+      width: 15px;
+      height: 15px;
+      top: -20px;
+      animation: fall 4s linear infinite;
+      opacity: 0.6;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="emoji-header">👸🏻💢</div>
+    <h1>
+      First send her FLOWERS!<br><br>
+      There better be at least <span style="font-size: 32px; font-weight: bold;">20 red 🌹</span> in that bouquet and Swiss Raffaello chocolate! 🍫<br><br>
+      That’s the least you could do!<br><br>
+      And then send her a 5k gift card! 💳<br><br>
+      Now pray to God she forgives you 🙏🏻✨
+    </h1>
+  </div>
+
+  <script>
+    // This creates the falling petals effect automatically
+    function createPetal() {
+      const p = document.createElement("div");
+      p.classList.add("petal");
+      p.style.left = Math.random() * 100 + "vw";
+      p.style.animationDuration = (Math.random() * 2 + 3) + "s";
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 5000);
+    }
+    setInterval(createPetal, 300);
+  </script>
+
+</body>
+</html>
